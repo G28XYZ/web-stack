@@ -1,0 +1,11 @@
+{
+  "name": "web-cpp-project",
+  "version": "1.0.0",
+  "main": "src/main.cpp",
+  "scripts": {
+    "docker-compose:build": "docker-compose -f docker-compose.yml up --build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
