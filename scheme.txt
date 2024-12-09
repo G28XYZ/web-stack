@@ -1,0 +1,18 @@
++-------------------------------+        +-----------------------------+
+|      cppcrow service          |        |      webserver service      |
+|-------------------------------|        |-----------------------------|
+| - container_name: cppcrow     |        |- container_name: webserver  |
+| - ports: 8080:8080            |        |- ports: 18080:80            |
+| - command: ./build/server     |        |- command: nginx -g          |
+| - network: app-network        |        |  "daemon off;"              |
++-------------------------------+        | - network: app-network      |
+             |                           +-----------------------------+
+             +-------------------------------+
+                             |
+                    +------------------------+
+                    |      app-network       |
+                    |------------------------|
+                    |   driver: bridge       |
+                    +------------------------+
+
+
